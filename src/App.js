@@ -51,12 +51,12 @@ class App extends React.Component {
                 <MainImage />
                 <Bio />
                 <Divider hidden />
-                <SkillList
-                    themeClassName={this.themeClassName}
-                    title={'Skills I have:'}
-                    data={skillData}
-                    dataLength={skillData.length}
-                />
+                    <SkillList
+                        themeClassName={this.themeClassName}
+                        title={'Skills I have:'}
+                        data={skillData}
+                        dataLength={skillData.length}
+                    />
                 <Divider hidden />
                 <SkillList
                     themeClassName={this.themeClassName}

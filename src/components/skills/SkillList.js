@@ -1,9 +1,11 @@
-import React from 'react';
-import { Segment, Grid, Header, Container } from 'semantic-ui-react';
+import React, { useState } from 'react';
+import { Visibility, Transition, Segment, Grid, Header, Container } from 'semantic-ui-react';
 
 import Skill from './Skill';
 
 const SkillList = ({ themeClassName, title, data, dataLength }) => {
+    const [visible, setVisable] = useState(false);
+
     const renderSkills = data.map(skill => {
         return  (
             <Grid.Column key={skill.name}>
@@ -16,32 +18,44 @@ const SkillList = ({ themeClassName, title, data, dataLength }) => {
         )
     });
 
+    const fadeIn = () => {
+        setVisable(true);
+    }
+
     return (
-        <Container>
-            <Segment
-                raised
-                padded
-                inverted={themeClassName(false, true)}
+        <Visibility once={false} onOnScreen={fadeIn}>
+            <Transition
+                visible={visible}
+                animation='fade up'
+                duration={3000}
             >
-                <Grid divided='vertically'>
-                    <Grid.Row>
-                        <Grid.Column>
-                            <Header
-                                as='h3'
-                                inverted={themeClassName(false, true)}
-                            >
-                                {title}
-                            </Header>
-                        </Grid.Column>
-                    </Grid.Row>
-                    <Grid.Row>
-                        <Grid doubling centered columns={dataLength}>
-                            {renderSkills}    
+                <Container>
+                    <Segment
+                        raised
+                        padded
+                        inverted={themeClassName(false, true)}
+                    >
+                        <Grid divided='vertically'>
+                            <Grid.Row>
+                                <Grid.Column>
+                                    <Header
+                                        as='h3'
+                                        inverted={themeClassName(false, true)}
+                                    >
+                                        {title}
+                                    </Header>
+                                </Grid.Column>
+                            </Grid.Row>
+                            <Grid.Row>
+                                <Grid doubling centered columns={dataLength}>
+                                    {renderSkills}    
+                                </Grid>
+                            </Grid.Row>
                         </Grid>
-                    </Grid.Row>
-                </Grid>
-            </Segment>
-        </Container>
+                    </Segment>
+                </Container>
+            </Transition>
+        </Visibility>
     );
 }
 
