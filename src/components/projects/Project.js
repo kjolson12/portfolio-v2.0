@@ -40,6 +40,5 @@ const Project = ({ screenshot, title, description, skills, themeClassName, link 
             </Card.Content>
         </Card>
     );
-};
-
+}
 export default Project;

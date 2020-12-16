@@ -1,0 +1,19 @@
+#nameHeader {
+    font-size: 7rem;
+    margin-top: 20px;
+}
+
+#titleHeader {
+    font-size: 2.5rem;
+    font-weight: 100;
+}
+
+@media only screen and (max-width: 450px) {
+    #nameHeader {
+        font-size: 5rem;
+    }
+
+    #titleHeader {
+        font-size: 2rem;
+    }
+}

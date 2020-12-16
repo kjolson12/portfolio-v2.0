@@ -1,10 +1,16 @@
-import React from 'react';
-import { Container, Divider, Header, Icon, Card } from 'semantic-ui-react';
+import React, { useState } from 'react';
+import { Visibility, Transition, Container, Divider, Header, Icon, Card } from 'semantic-ui-react';
 
 import Project from './Project';
 import { data } from '../../data/ProjectData';
 
 const ProjectList = ({ themeClassName }) => {
+    const [visible, setVisable] = useState(false);
+
+    const fadeIn = () => {
+        setVisable(true);
+    };
+
     const renderProjects = data.map(project => {
         return (
             <Project 
@@ -27,9 +33,19 @@ const ProjectList = ({ themeClassName }) => {
                     Featured Projects
                 </Header>
             </Divider>
-            <Card.Group stackable itemsPerRow={3}>
-                {renderProjects}
-            </Card.Group>
+            <Visibility once={false} onOnScreen={fadeIn}>
+                <Transition
+                    visible={visible}
+                    animation='fade'
+                    duration={3000}
+                >
+                    <Container>
+                        <Card.Group stackable itemsPerRow={3}>
+                            {renderProjects}
+                        </Card.Group>
+                    </Container>
+                </Transition>
+            </Visibility>
         </Container>
     );
 };

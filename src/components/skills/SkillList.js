@@ -20,7 +20,7 @@ const SkillList = ({ themeClassName, title, data, dataLength }) => {
 
     const fadeIn = () => {
         setVisable(true);
-    }
+    };
 
     return (
         <Visibility once={false} onOnScreen={fadeIn}>

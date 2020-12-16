@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Container, Transition, Header } from 'semantic-ui-react';
 
+import './NameAndTitle.css';
+
 const NameAndTitle = ({ themeClassName }) => {
     const [visible, setVisible] = useState(false);
     
@@ -14,7 +16,7 @@ const NameAndTitle = ({ themeClassName }) => {
                 <Header
                     as='h1'
                     color='violet'
-                    style={{ fontSize: '7rem', marginTop: '20px' }}
+                    id='nameHeader'
                     inverted={themeClassName(false, true)}
                 >
                     Kyle Olson
@@ -24,7 +26,7 @@ const NameAndTitle = ({ themeClassName }) => {
                 <Header
                     as='h2'
                     color='violet'
-                    style={{ fontSize: '2.5rem', fontWeight: '100'}}
+                    id='titleHeader'
                     inverted={themeClassName(false, true)}
                 >
                     Front End Engineer
