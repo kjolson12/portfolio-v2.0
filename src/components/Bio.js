@@ -17,12 +17,11 @@ const Bio = () => {
                     <p
                         style={{ margin: '50px 0px', fontWeight: '100', lineHeight: '1.75' }}
                     >
-                        I am a web developer relocating to the south Denver Colorado
-                        area searching for career opportunities. I was introduced to code
-                        about six years ago and have dedicated myself to honing the craft
-                        for the last year. Currently I am skilled in the front end but plan
-                        to expand my knowledge to the back end to become a more versatile
-                        asset to an engineering team.
+                        I was first introduced to web development in 2015, but it took four
+                        years of biology classes and two years in biomedical research for me to realize 
+                        that coding was my calling. My relentless pursuit of perfection and
+                        determination to find creative solutions help me to build clean, 
+                        effective projects and will make me a strong asset to any engineering team.
                     </p>
                 </Container>
             </Grid.Row>
