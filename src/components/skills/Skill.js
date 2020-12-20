@@ -21,6 +21,7 @@ class Skill extends React.Component {
                             alt='logo'
                             src={this.props.imageSource}
                             onMouseOver={this.toggleVisibility}
+                            style={{ maxHeight: '80px', maxWidth: '80px' }}
                         />
                     </Transition>
                 </Grid.Row>
