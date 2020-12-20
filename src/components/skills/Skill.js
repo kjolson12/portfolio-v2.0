@@ -20,9 +20,8 @@ class Skill extends React.Component {
                         <Image
                             alt='logo'
                             src={this.props.imageSource}
-                            size='small'
+                            size='tiny'
                             onMouseOver={this.toggleVisibility}
-                            style={{ maxHeight: '80px !important', maxWidth: '80px !important' }}
                         />
                     </Transition>
                 </Grid.Row>
