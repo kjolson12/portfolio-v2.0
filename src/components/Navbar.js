@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Icon, Button } from 'semantic-ui-react';
+import { Grid, Icon, Button, GridColumn, Popup } from 'semantic-ui-react';
 
 import Logo from '../images/Violet_Black_logo';
 
@@ -10,20 +10,36 @@ const Navbar = ({ toggleTheme, themeClassName }) => {
                 <Logo />
             </Grid.Column>
             <Grid.Column width={8}>
-                <Grid stackable verticalAlign='middle' reversed='mobile'>
-                    <Grid.Column textAlign='right' width={12}>
+                <Grid verticalAlign='middle'>
+                    <Grid.Column textAlign='right' width={12} only='computer'>
                         <Icon
                             name={themeClassName('sun', 'moon')}
                             size='big'
                             color='violet'
                         />
-                        <Icon
-                            name={themeClassName('toggle off', 'toggle on')}
-                            size='huge'
-                            onClick={toggleTheme}
-                            color='violet'
+                        <Popup
+                            content='Change the theme!'
+                            mouseEnterDelay={500}
+                            mouseLeaveDelay={250}
+                            inverted={themeClassName(false, true)}
+                            trigger={
+                                <Icon
+                                    name={themeClassName('toggle off', 'toggle on')}
+                                    size='huge'
+                                    onClick={toggleTheme}
+                                    color='violet'
+                                />
+                            }
                         />
                     </Grid.Column>
+                    <GridColumn width={12} only='mobile tablet'>
+                        <Icon
+                            name={themeClassName('sun', 'moon')}
+                            size='big'
+                            color='violet'
+                            onClick={toggleTheme}
+                        />
+                    </GridColumn>
                     <Grid.Column width={4}>
                         <Button
                             color='violet'
