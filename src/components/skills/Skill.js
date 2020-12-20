@@ -20,7 +20,6 @@ class Skill extends React.Component {
                         <Image
                             alt='logo'
                             src={this.props.imageSource}
-                            size='tiny'
                             onMouseOver={this.toggleVisibility}
                         />
                     </Transition>
