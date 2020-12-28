@@ -1,15 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Container, Transition, Header } from 'semantic-ui-react';
 
 import './NameAndTitle.css';
 
 const NameAndTitle = ({ themeClassName }) => {
-    const [visible, setVisible] = useState(false);
-    
-    useEffect(() => {
-        setTimeout(() => setVisible(true), 500);
-    }, []);
-    
     return (
         <Container align='center'>
             <Transition transitionOnMount={true} animation='fade left' duration={2000}>
@@ -22,7 +16,7 @@ const NameAndTitle = ({ themeClassName }) => {
                     Kyle Olson
                 </Header>
             </Transition>
-            <Transition visible={visible} animation='fade left' duration={2500}>
+            <Transition transitionOnMount={true} animation='fade left' duration={2500}>
                 <Header
                     as='h2'
                     color='violet'

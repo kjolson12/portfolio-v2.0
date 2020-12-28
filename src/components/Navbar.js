@@ -45,7 +45,7 @@ const Navbar = ({ toggleTheme, themeClassName }) => {
                             color='violet'
                             floated='right'
                             animated
-                            href='https://docs.google.com/document/d/1hwFZ9iQUeT3MRrY428W56Vt7OMOV-UB-SPG-A_fPzOw/export?format=pdf'
+                            href='https://docs.google.com/document/d/1i2JHPheXS9esD8rPgV5SG6ZIDqQRP7zC_4bCccul_4w/export?format=pdf'
                             size='big'
                         >
                             <Button.Content visible>Resumé</Button.Content>
