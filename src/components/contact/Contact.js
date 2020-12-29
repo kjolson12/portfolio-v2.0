@@ -14,7 +14,7 @@ const Contact = () => {
                         style={{ marginTop: '50px', }}
                     >
                         <Icon name='talk' />
-                        Feel free to reach out
+                        Get in touch
                     </Header>
                     <Divider hidden />
                     <ContactButton iconName='github' link='https://github.com/kjolson12' />
