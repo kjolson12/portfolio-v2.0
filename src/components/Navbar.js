@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Icon, Button, GridColumn, Popup } from 'semantic-ui-react';
+import { Grid, Icon, Button, Popup } from 'semantic-ui-react';
 
 import Logo from '../images/Violet_Black_logo';
 
@@ -32,14 +32,14 @@ const Navbar = ({ toggleTheme, themeClassName }) => {
                             }
                         />
                     </Grid.Column>
-                    <GridColumn width={12} only='mobile tablet'>
+                    <Grid.Column width={12} only='mobile tablet'>
                         <Icon
                             name={themeClassName('sun', 'moon')}
                             size='big'
                             color='violet'
                             onClick={toggleTheme}
                         />
-                    </GridColumn>
+                    </Grid.Column>
                     <Grid.Column width={4}>
                         <Button
                             color='violet'

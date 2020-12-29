@@ -1,5 +1,5 @@
 import React from 'react';
-import { Divider } from 'semantic-ui-react';
+import { Divider, Sticky } from 'semantic-ui-react';
 
 import Navbar from './components/Navbar';
 import NameAndTitle from './components/NameAndTitle';
@@ -8,6 +8,10 @@ import Bio from './components/Bio';
 import SkillList from './components/skills/SkillList';
 import ProjectList from './components/projects/ProjectList';
 import Contact from './components/contact/Contact';
+import ImageHeader from './components/ImageHeader';
+
+import chopWood from './images/animat-chop-wood-color.gif';
+import rocket from './images/animat-rocket-color.gif';
 
 import skillData from './data/SkillData';
 import toolData from './data/ToolData';
@@ -42,29 +46,31 @@ class App extends React.Component {
     render() {
         return (
             <div style={{ backgroundColor: this.themeClassName('', '#121212') }}>
-                <Navbar
-                    toggleTheme={this.toggleTheme}
-                    themeClassName={this.themeClassName}
-                />
+                <Sticky>
+                    <Navbar
+                        toggleTheme={this.toggleTheme}
+                        themeClassName={this.themeClassName}
+                    />
+                </Sticky>
                 <Divider hidden />
                 <NameAndTitle themeClassName={this.themeClassName} />
                 <MainImage />
                 <Bio />
-                <Divider hidden />
+                <ImageHeader imgSrc={chopWood} headerText='Skills and Tools' />
                 <SkillList
                     themeClassName={this.themeClassName}
-                    title={'Skills I have:'}
+                    title={'Technologies and Frameworks:'}
                     data={skillData}
                     dataLength={skillData.length}
                 />
                 <Divider hidden />
                 <SkillList
                     themeClassName={this.themeClassName}
-                    title={'Tools I use:'}
+                    title={'Tools:'}
                     data={this.filterToolData()}
                     dataLength={this.filterToolData().length}
                 />
-                <Divider hidden />
+                <ImageHeader imgSrc={rocket} headerText='Featured Projects' />
                 <ProjectList themeClassName={this.themeClassName} />
                 <Divider hidden />
                 <Contact />

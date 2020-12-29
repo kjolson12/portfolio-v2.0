@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Visibility, Transition, Container, Divider, Header, Icon, Card } from 'semantic-ui-react';
+import { Visibility, Transition, Container, Card } from 'semantic-ui-react';
 
 import Project from './Project';
 import { data } from '../../data/ProjectData';
@@ -27,12 +27,6 @@ const ProjectList = ({ themeClassName }) => {
 
     return (
         <Container>
-            <Divider horizontal style={{ marginTop: '100px', marginBottom: '50px' }}>
-                <Header as='h1' inverted={themeClassName(false, true)}>
-                    <Icon name='folder open' />
-                    Featured Projects
-                </Header>
-            </Divider>
             <Visibility once={false} onOnScreen={fadeIn}>
                 <Transition
                     visible={visible}
