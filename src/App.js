@@ -52,7 +52,6 @@ class App extends React.Component {
                         themeClassName={this.themeClassName}
                     />
                 </Sticky>
-                <Divider hidden />
                 <NameAndTitle themeClassName={this.themeClassName} />
                 <MainImage />
                 <Bio />

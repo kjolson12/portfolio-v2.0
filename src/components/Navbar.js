@@ -5,7 +5,7 @@ import Logo from '../images/Violet_Black_logo';
 
 const Navbar = ({ toggleTheme, themeClassName }) => {
     return (
-        <Grid padded>
+        <Grid padded style={{ backgroundColor: themeClassName('white', '#121212') }}>
             <Grid.Column width={8}>
                 <Logo />
             </Grid.Column>
