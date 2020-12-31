@@ -46,7 +46,7 @@ class App extends React.Component {
     render() {
         return (
             <div style={{ backgroundColor: this.themeClassName('', '#121212') }}>
-                <Sticky>
+                <Sticky active={true}>
                     <Navbar
                         toggleTheme={this.toggleTheme}
                         themeClassName={this.themeClassName}
@@ -55,7 +55,11 @@ class App extends React.Component {
                 <NameAndTitle themeClassName={this.themeClassName} />
                 <MainImage />
                 <Bio />
-                <ImageHeader imgSrc={chopWood} headerText='Skills and Tools' />
+                <ImageHeader
+                    themeClassName={this.themeClassName}
+                    imgSrc={chopWood}
+                    headerText='Skills and Tools'
+                />
                 <SkillList
                     themeClassName={this.themeClassName}
                     title={'Technologies and Frameworks:'}
@@ -69,7 +73,11 @@ class App extends React.Component {
                     data={this.filterToolData()}
                     dataLength={this.filterToolData().length}
                 />
-                <ImageHeader imgSrc={rocket} headerText='Featured Projects' />
+                <ImageHeader
+                    themeClassName={this.themeClassName}
+                    imgSrc={rocket}
+                    headerText='Featured Projects'
+                />
                 <ProjectList themeClassName={this.themeClassName} />
                 <Divider hidden />
                 <Contact />
