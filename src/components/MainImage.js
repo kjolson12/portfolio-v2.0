@@ -10,7 +10,6 @@ const MainImage = () => {
             src={computerImage}
             size='large'
             centered
-            style={{ marginTop: '100px' }}
         />
     );
 };

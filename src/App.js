@@ -2,13 +2,13 @@ import React from 'react';
 import { Divider, Sticky } from 'semantic-ui-react';
 
 import Navbar from './components/Navbar';
-import NameAndTitle from './components/NameAndTitle';
 import MainImage from './components/MainImage';
 import Bio from './components/Bio';
 import SkillList from './components/skills/SkillList';
 import ProjectList from './components/projects/ProjectList';
 import Contact from './components/contact/Contact';
-import ImageHeader from './components/ImageHeader';
+import ImageHeader from './components/ImageHeader/ImageHeader';
+import NameAndTitle from './components/NameAndTitle/NameAndTitle';
 
 import chopWood from './images/animat-chop-wood-color.gif';
 import rocket from './images/animat-rocket-color.gif';
@@ -46,13 +46,13 @@ class App extends React.Component {
     render() {
         return (
             <div style={{ backgroundColor: this.themeClassName('', '#121212') }}>
-                <Sticky active={true}>
+                <Sticky>
                     <Navbar
                         toggleTheme={this.toggleTheme}
                         themeClassName={this.themeClassName}
                     />
                 </Sticky>
-                <NameAndTitle themeClassName={this.themeClassName} />
+                <NameAndTitle themeClassName={this.themeClassName}/>
                 <MainImage />
                 <Bio />
                 <ImageHeader
