@@ -52,7 +52,7 @@ class App extends React.Component {
                         themeClassName={this.themeClassName}
                     />
                 </Sticky>
-                <NameAndTitle themeClassName={this.themeClassName}/>
+                <NameAndTitle />
                 <MainImage />
                 <Bio />
                 <ImageHeader

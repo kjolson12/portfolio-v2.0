@@ -15,7 +15,7 @@ const Bio = () => {
                         Hi, I'm Kyle. Nice to meet you.
                     </Header>
                     <p
-                        style={{ margin: '50px 0px', fontWeight: '100', lineHeight: '1.75' }}
+                        style={{ margin: '50px 0px', fontWeight: '100', lineHeight: '1.75', fontSize: '1.5rem' }}
                     >
                         I was first introduced to web development in 2015, but it took four
                         years of biology classes and two years in biomedical research for me to realize 
