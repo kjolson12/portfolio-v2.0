@@ -1,13 +1,22 @@
 import covid from '../images/project-screens/covid-ss.png';
 import jamming from '../images/project-screens/jamming-ss.png';
 import pokemon from '../images/project-screens/pokemon-ss.png';
-import ravenous from '../images/project-screens/ravenous-ss.png';
+import munchies from '../images/project-screens/munchies-ss.png';
 import teacozy from '../images/project-screens/teacozy-ss.png';
 import videos from '../images/project-screens/videos-ss.png';
 import stocks from '../images/project-screens/nest_egg-ss.png';
 
 
 export const data = [
+    {
+        title: 'Munchies',
+        description: `Restaurant finder app that allows the user to search for
+        restaurants by location and sort the results by rating, number
+        of reviews, or best match. Uses the Yelp RESTful API.`,
+        skills: 'React, Redux, Semantic UI, CSS',
+        screenshot: munchies,
+        link: 'https://munchies-pearl.vercel.app/'
+    },
     {
         title: 'Nest Egg',
         description: `Stock charting app that allows users to search for stocks, view
@@ -42,15 +51,6 @@ export const data = [
         skills: 'React, CSS',
         screenshot: pokemon,
         link: 'https://pokemon-api-puce.vercel.app/'
-    },
-    {
-        title: 'Ravenous',
-        description: `Restaurant finder app that allows the user to search for
-        restaurants by location and sort the results by rating, number
-        of reviews, or best match. Uses the Yelp RESTful API.`,
-        skills: 'React, CSS',
-        screenshot: ravenous,
-        link: 'https://ravenous-eta.vercel.app/'
     },
     {
         title: 'Tea Cozy',
