@@ -58,7 +58,7 @@ export const data = [
         Flexbox grid system.`,
         skills: 'HTML, CSS',
         screenshot: teacozy,
-        link: '/'
+        link: 'https://teacozy.vercel.app/'
     },
     {
         title: 'Video Player',
