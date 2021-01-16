@@ -31,7 +31,7 @@ class App extends React.Component {
         return this.state.theme === 'Light' ? lightParam : darkParam;
     }
 
-    filterToolData () {
+    filterToolData() {
         let filteredToolData;
 
         if (this.state.theme === 'Light') {
@@ -45,7 +45,7 @@ class App extends React.Component {
 
     render() {
         return (
-            <div style={{ backgroundColor: this.themeClassName('', '#121212') }}>
+            <div style={{ backgroundColor: this.themeClassName('', '#121212'), transition: '200ms' }}>
                 <Sticky>
                     <Navbar
                         toggleTheme={this.toggleTheme}
