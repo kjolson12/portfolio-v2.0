@@ -47,6 +47,7 @@ const Navbar = ({ toggleTheme, themeClassName }) => {
                             animated
                             href='https://docs.google.com/document/d/1i2JHPheXS9esD8rPgV5SG6ZIDqQRP7zC_4bCccul_4w/export?format=pdf'
                             size='big'
+                            target="_blank"
                         >
                             <Button.Content visible>Resumé</Button.Content>
                             <Button.Content hidden>
