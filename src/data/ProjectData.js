@@ -5,6 +5,7 @@ import munchies from '../images/project-screens/munchies-ss.png';
 import teacozy from '../images/project-screens/teacozy-ss.png';
 import videos from '../images/project-screens/videos-ss.png';
 import stocks from '../images/project-screens/nest_egg-ss.png';
+import pingPong from '../images/project-screens/pingPong-ss.png';
 
 
 export const data = [
@@ -26,6 +27,15 @@ export const data = [
         screenshot: stocks,
         link: 'https://nest-egg.vercel.app/'
 
+    },
+    {
+        title: 'Ping Pong Scoreboard',
+        description: `A simple scorekeeper for playing ping pong with a friend. Set the 
+        score you wish to play to and press the buttons to add points. Press 'reset' when
+        game is finished.`,
+        skills: 'HTML, CSS, JavaScript, Bootstrap',
+        screenshot: pingPong,
+        link: 'https://ping-pong-sooty.vercel.app/'
     },
     {
         title: 'COVID-19 Tracker',
