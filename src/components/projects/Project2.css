@@ -1,0 +1,15 @@
+#projectContainer {
+    margin: 2rem 0;
+}
+
+#projectHeader {
+    font-size: 2.5rem;
+}
+
+#githubButton, #projectButton {
+    margin: 0 0.5rem;
+}
+
+#projectDescription {
+    font-size: 1.25rem;
+}
