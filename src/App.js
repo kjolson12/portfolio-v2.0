@@ -6,7 +6,6 @@ import MainImage from './components/MainImage';
 import Bio from './components/Bio';
 import SkillList from './components/skills/SkillList';
 import ProjectList from './components/projects/ProjectList';
-import Project2 from './components/projects/Project2';
 import Contact from './components/contact/Contact';
 import ImageHeader from './components/ImageHeader/ImageHeader';
 import NameAndTitle from './components/NameAndTitle/NameAndTitle';
@@ -79,7 +78,6 @@ class App extends React.Component {
                     imgSrc={rocket}
                     headerText='Featured Projects'
                 />
-                {/*<Project2 />*/}
                 <ProjectList themeClassName={this.themeClassName} />
                 <Divider hidden />
                 <Contact />

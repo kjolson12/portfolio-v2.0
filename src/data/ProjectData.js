@@ -16,7 +16,8 @@ export const data = [
         of reviews, or best match. Uses the Yelp RESTful API.`,
         skills: 'React, Redux, Semantic UI, CSS',
         screenshot: munchies,
-        link: 'https://munchies-pearl.vercel.app/'
+        link: 'https://munchies-pearl.vercel.app/',
+        githubLink: 'https://github.com/kjolson12/munchies'
     },
     {
         title: 'Nest Egg',
@@ -25,7 +26,8 @@ export const data = [
         Finnhub RESTful API.`,
         skills: 'React, Redux, Semantic UI',
         screenshot: stocks,
-        link: 'https://nest-egg.vercel.app/'
+        link: 'https://nest-egg.vercel.app/',
+        githubLink: 'https://github.com/kjolson12/stocks'
 
     },
     {
@@ -35,7 +37,8 @@ export const data = [
         game is finished.`,
         skills: 'HTML, CSS, JavaScript, Bootstrap',
         screenshot: pingPong,
-        link: 'https://ping-pong-sooty.vercel.app/'
+        link: 'https://ping-pong-sooty.vercel.app/',
+        githubLink: 'https://github.com/kjolson12/pingPong'
     },
     {
         title: 'COVID-19 Tracker',
@@ -43,7 +46,8 @@ export const data = [
         recovered, and deaths globally or by country.`,
         skills: 'React, CSS',
         screenshot: covid,
-        link: 'https://covid-19-tracker-flame.vercel.app/'
+        link: 'https://covid-19-tracker-flame.vercel.app/',
+        githubLink: 'https://github.com/kjolson12/COVID-19-tracker'
     },
     {
         title: 'Jamming',
@@ -52,7 +56,8 @@ export const data = [
         directly to their Spotify library.`,
         skills: 'React, CSS',
         screenshot: jamming,
-        link: 'https://jamming-ochre.vercel.app/'
+        link: 'https://jamming-ochre.vercel.app/',
+        githubLink: 'https://github.com/kjolson12/Jamming'
     },
     {
         title: 'Pokedex',
@@ -60,7 +65,8 @@ export const data = [
         of pokemon, their types, and moves.`,
         skills: 'React, CSS',
         screenshot: pokemon,
-        link: 'https://pokemon-api-puce.vercel.app/'
+        link: 'https://pokemon-api-puce.vercel.app/',
+        githubLink: 'https://github.com/kjolson12/Pokemon-api'
     },
     {
         title: 'Tea Cozy',
@@ -68,7 +74,8 @@ export const data = [
         Flexbox grid system.`,
         skills: 'HTML, CSS',
         screenshot: teacozy,
-        link: 'https://teacozy.vercel.app/'
+        link: 'https://teacozy.vercel.app/',
+        githubLink: 'https://github.com/kjolson12/teacozy'
     },
     {
         title: 'Video Player',
@@ -76,6 +83,7 @@ export const data = [
         the user can search for videos on Youtube's API.`,
         skills: 'React, Semantic UI, CSS',
         screenshot: videos,
-        link: 'https://video-player-plum.vercel.app/'
+        link: 'https://video-player-plum.vercel.app/',
+        githubLink: 'https://github.com/kjolson12/videos'
     }
 ]

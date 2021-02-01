@@ -1,0 +1,41 @@
+#projectContainer {
+    margin: 2rem 0 8rem 0;
+}
+
+#projectHeader {
+    font-size: 2.5rem;
+}
+
+#projectHeaderDark {
+    font-size: 2.5rem;
+    color: white;
+}
+
+#githubButton, #projectButton {
+    margin: 0 0.5rem;
+}
+
+#projectDescription {
+    font-size: 1.25rem;
+    padding: 0 3rem;
+    line-height: 2.5rem;
+}
+
+#projectDescriptionDark {
+    font-size: 1.25rem;
+    padding: 0 3rem;
+    line-height: 2.5rem;
+    color: white;
+}
+
+#projectSkills {
+    padding: 0 3rem;
+    font-weight: 900;
+    color: rgba(0,0,0,.4);
+}
+
+#projectSkillsDark {
+    padding: 0 3rem;
+    font-weight: 900;
+    color: rgba(255,255,255,.4);
+}
