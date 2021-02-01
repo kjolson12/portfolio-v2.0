@@ -3,7 +3,7 @@ import { Visibility, Transition, Container, Grid, GridColumn, GridRow, Image, He
 
 import './Project.css';
 
-const Project = ({ screenshot, title, description, skills, link, githubLink, themeClassName }) => {
+const Project = ({ screenshot, title, description, skills, link, githubLink, themeClassName, reversed }) => {
     const [visible, setVisable] = useState(false);
 
     const fadeIn = () => {
@@ -19,7 +19,7 @@ const Project = ({ screenshot, title, description, skills, link, githubLink, the
                 mountOnShow={false}
             >
                 <Container id='projectContainer'>
-                    <Grid stackable columns='2'>
+                    <Grid reversed={reversed} stackable columns='2'>
                         <GridColumn>
                             <Image
                                 href={link}
@@ -28,20 +28,20 @@ const Project = ({ screenshot, title, description, skills, link, githubLink, the
                                 src={screenshot}
                             />
                         </GridColumn>
-                        <GridColumn>
+                        <GridColumn verticalAlign='middle'>
                             <Grid>
-                                <GridRow centered>
+                                <GridRow id='headerRow' centered>
                                     <Header as='h3' id={themeClassName('projectHeader', 'projectHeaderDark')}>
                                         {title}
                                     </Header>
                                 </GridRow>
-                                <GridRow>
+                                <GridRow id='descriptionRow'>
                                     <p id={themeClassName('projectDescription', 'projectDescriptionDark')}>{description}</p>
                                 </GridRow>
-                                <GridRow>
+                                <GridRow id='skillsRow'>
                                     <span id={themeClassName('projectSkills', 'projectSkillsDark')}>{skills}</span>
                                 </GridRow>
-                                <GridRow centered>
+                                <GridRow centered id='buttonsRow'>
                                     <a href={githubLink} target='_blank' rel='noreferrer'>
                                         <Button id='githubButton' color='blue'>View Github Repo</Button>
                                     </a>

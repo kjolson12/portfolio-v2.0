@@ -18,13 +18,13 @@ const Contact = () => {
                     </Header>
                     <Divider hidden />
                     <ContactButton iconName='github' link='https://github.com/kjolson12' />
-                    <ContactButton iconName='linkedin' link='https://www.linkedin.com/in/kyle-olson-a27013164/' />
-                    <ContactButton iconName='mail' linl='/' />
+                    <ContactButton iconName='linkedin' link='https://www.linkedin.com/in/kyle-j-olson/' />
+                    <ContactButton iconName='mail' link='mailto:kjolson2016@gmail.com' />
                     <Divider hidden />
                     <p
-                        style={{ marginTop: '75px' }}
+                        style={{ marginTop: '50px' }}
                     >
-                        Built by Kyle Olson | 2020
+                        Built by Kyle Olson | 2021
                     </p>
                 </Container>
             </Grid.Row>

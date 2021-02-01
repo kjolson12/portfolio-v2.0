@@ -1,9 +1,14 @@
 #projectContainer {
-    margin: 2rem 0 8rem 0;
+    margin: 2rem 0 7rem 0;
+}
+
+#descriptionRow, #buttonsRow {
+    padding: 0;
 }
 
 #projectHeader {
     font-size: 2.5rem;
+    padding: 0 3rem;
 }
 
 #projectHeaderDark {
@@ -18,7 +23,7 @@
 #projectDescription {
     font-size: 1.25rem;
     padding: 0 3rem;
-    line-height: 2.5rem;
+    line-height: 2rem;
 }
 
 #projectDescriptionDark {

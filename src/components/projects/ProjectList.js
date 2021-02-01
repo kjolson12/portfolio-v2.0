@@ -4,6 +4,12 @@ import Project from './Project';
 import { data } from '../../data/ProjectData';
 
 const ProjectList = ({ themeClassName }) => {
+    const renderReversed = project => {
+        if (project.id % 2 === 0) {
+            return 'computer tablet'
+        }
+    };
+
     const renderProjects = data.map(project => {
         return (
             <Project
@@ -11,9 +17,11 @@ const ProjectList = ({ themeClassName }) => {
                 title={project.title}
                 description={project.description}
                 skills={project.skills}
-                key={project.title}
+                key={project.id}
                 themeClassName={themeClassName}
                 link={project.link}
+                githubLink={project.githubLink}
+                reversed={renderReversed(project)}
             />
         )
     });
