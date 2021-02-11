@@ -7,11 +7,12 @@ const Project = ({ screenshot, title, description, skills, link, githubLink, the
     const [visible, setVisable] = useState(false);
 
     const fadeIn = () => {
+        console.log(title);
         setVisable(true);
     };
 
     return (
-        <Visibility once={false} onOnScreen={fadeIn}>
+        <Visibility onOnScreen={fadeIn}>
             <Transition
                 visible={visible}
                 animation='fade'

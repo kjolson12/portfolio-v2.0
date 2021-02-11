@@ -1,6 +1,7 @@
 #nameHeader {
-    font-size: 7rem;
+    font-size: 8rem;
     margin-top: 40px;
+    letter-spacing: 0.225rem;
 }
 
 #titleHeader {
@@ -9,9 +10,11 @@
     margin-bottom: 100px;
 }
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 602px) {
     #nameHeader {
         font-size: 5rem;
+        margin-top: 50px;
+        letter-spacing: normal;
     }
 
     #titleHeader {
