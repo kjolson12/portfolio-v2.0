@@ -1,20 +1,22 @@
 import React, { useState } from 'react';
 import { Visibility, Transition, Segment, Grid, Header, Container } from 'semantic-ui-react';
 
+import './SkillList.css'
+
 import Skill from './Skill';
 
-const SkillList = ({ themeClassName, title, data, dataLength }) => {
+const SkillList = ({ themeClassName, title, data }) => {
     const [visible, setVisable] = useState(false);
 
     const renderSkills = data.map(skill => {
         return  (
-            <Grid.Column key={skill.name}>
+            <Grid.Row key={skill.name}>
                 <Skill
                     skill={skill.name}
                     imageSource={skill.imageSource}
                     themeClassName={themeClassName}
                 />
-            </Grid.Column>
+            </Grid.Row>
         )
     });
 
@@ -41,15 +43,16 @@ const SkillList = ({ themeClassName, title, data, dataLength }) => {
                                     <Header
                                         as='h3'
                                         inverted={themeClassName(false, true)}
+                                        id='categoryHeader'
                                     >
                                         {title}
                                     </Header>
                                 </Grid.Column>
                             </Grid.Row>
                             <Grid.Row>
-                                <Grid doubling centered columns={dataLength}>
+                                <Grid.Column>
                                     {renderSkills}    
-                                </Grid>
+                                </Grid.Column>
                             </Grid.Row>
                         </Grid>
                     </Segment>

@@ -1,8 +1,7 @@
 import githubDarkLogo from '../images/logos/github-logo.png';
-import semanticuiLogo from '../images/logos/semanticui-logo.png';
-import reduxLogo from '../images/logos/redux-logo.png';
-import terminalLogo from '../images/logos/terminal-logo.png';
 import githubLightLogo from '../images/logos/github-light-logo.png';
+import vsCodeLogo from '../images/logos/vsCode-logo.png';
+import terminalLogo from '../images/logos/terminal-logo.png';
 import vercelDarkLogo from '../images/logos/vercel-dark-logo.png';
 import vercelLightLogo from '../images/logos/vercel-light-logo.png';
 
@@ -18,29 +17,24 @@ const data = [
         id: 1.5
     },
     {
-        name: 'Semantic UI',
-        imageSource: semanticuiLogo,
+        name: 'Visual Studio Code',
+        imageSource: vsCodeLogo,
         id: 2
-    },
-    {
-        name: 'Redux',
-        imageSource: reduxLogo,
-        id: 3
     },
     {
         name: 'Terminal',
         imageSource: terminalLogo,
-        id: 4
+        id: 3
     },
     {
         name: 'Vercel',
         imageSource: vercelDarkLogo,
-        id: 5
+        id: 4
     },
     {
         name: 'Vercel',
         imageSource: vercelLightLogo,
-        id: 5.5
+        id: 4.5
     }
 ]
 

@@ -4,7 +4,7 @@ import { Divider, Sticky } from 'semantic-ui-react';
 import Navbar from './components/Navbar';
 import MainImage from './components/MainImage';
 import Bio from './components/Bio';
-import SkillList from './components/skills/SkillList';
+import SkillsGroup from './components/SkillsGroup/SkillsGroup';
 import ProjectList from './components/projects/ProjectList';
 import Contact from './components/contact/Contact';
 import ImageHeader from './components/ImageHeader/ImageHeader';
@@ -12,9 +12,6 @@ import NameAndTitle from './components/NameAndTitle/NameAndTitle';
 
 import chopWood from './images/animat-chop-wood-color.gif';
 import rocket from './images/animat-rocket-color.gif';
-
-import skillData from './data/SkillData';
-import toolData from './data/ToolData';
 
 class App extends React.Component {
     state = { theme: 'Light' }
@@ -29,18 +26,6 @@ class App extends React.Component {
 
     themeClassName = (lightParam, darkParam) => {
         return this.state.theme === 'Light' ? lightParam : darkParam;
-    }
-
-    filterToolData() {
-        let filteredToolData;
-
-        if (this.state.theme === 'Light') {
-            filteredToolData = toolData.filter(x => x.id !== 1.5 && x.id !== 5.5);
-        } else {
-            filteredToolData = toolData.filter(x => x.id !== 1 && x.id !== 5);
-        };
-
-        return filteredToolData;
     }
 
     render() {
@@ -60,18 +45,9 @@ class App extends React.Component {
                     imgSrc={chopWood}
                     headerText='Skills and Tools'
                 />
-                <SkillList
+                <SkillsGroup
                     themeClassName={this.themeClassName}
-                    title={'Technologies and Frameworks:'}
-                    data={skillData}
-                    dataLength={skillData.length}
-                />
-                <Divider hidden />
-                <SkillList
-                    themeClassName={this.themeClassName}
-                    title={'Tools:'}
-                    data={this.filterToolData()}
-                    dataLength={this.filterToolData().length}
+                    state={this.state}
                 />
                 <ImageHeader
                     themeClassName={this.themeClassName}

@@ -1,5 +1,7 @@
 import React from 'react';
-import { Grid, Image, Header, Transition } from 'semantic-ui-react';
+import { Image, Header, Transition, Grid } from 'semantic-ui-react';
+
+import './Skill.css';
 
 class Skill extends React.Component {
     state = { visible: true }
@@ -8,31 +10,25 @@ class Skill extends React.Component {
         this.setState(prevState => ({ visible: !prevState.visible }));
     }
 
-    render () {
+    render() {
         return (
-            <Grid centered>
-                <Grid.Row>
-                    <Transition
-                        animation='jiggle'
-                        visible={this.state.visible}
-                        duration={500}
-                    >
-                        <Image
-                            alt='logo'
-                            src={this.props.imageSource}
-                            onMouseOver={this.toggleVisibility}
-                            style={{ maxHeight: '80px', maxWidth: '80px' }}
-                        />
-                    </Transition>
-                </Grid.Row>
-                <Grid.Row>
-                    <Header
-                        as='h3'
-                        inverted={this.props.themeClassName(false, true)}
-                    >
+            <Grid onMouseOver={this.toggleVisibility} >
+                <Grid.Column>
+                    <Header as='h3' inverted={this.props.themeClassName(false, true)}>
+                        <Transition
+                            animation='jiggle'
+                            visible={this.state.visible}
+                            duration={500}
+                        >
+                            <Image
+                                alt='logo'
+                                src={this.props.imageSource}
+                                id='skillImage'
+                            />
+                        </Transition>
                         {this.props.skill}
                     </Header>
-                </Grid.Row>
+                </Grid.Column>
             </Grid>
         );
     }
