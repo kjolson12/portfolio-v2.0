@@ -4,6 +4,7 @@ import { Grid } from 'semantic-ui-react';
 import SkillList from '../skills/SkillList';
 
 import frontData from '../../data/FrontData';
+import backData from '../../data/BackData';
 import toolData from '../../data/ToolData';
 
 const SkillsGroup = ({ themeClassName, state }) => {
@@ -11,9 +12,9 @@ const SkillsGroup = ({ themeClassName, state }) => {
         let filteredToolData;
 
         if (state.theme === 'Light') {
-            filteredToolData = toolData.filter(x => x.id !== 1.5 && x.id !== 4.5);
+            filteredToolData = toolData.filter(x => x.id !== 1.5 && x.id !== 5.5);
         } else {
-            filteredToolData = toolData.filter(x => x.id !== 1 && x.id !== 4);
+            filteredToolData = toolData.filter(x => x.id !== 1 && x.id !== 5);
         };
 
         return filteredToolData;
@@ -33,7 +34,7 @@ const SkillsGroup = ({ themeClassName, state }) => {
                 <SkillList
                     themeClassName={themeClassName}
                     title={'Backend Technologies:'}
-                    data={filterToolData()}
+                    data={backData}
                 />
             </Grid.Column>
             <Grid.Column>
