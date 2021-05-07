@@ -9,14 +9,25 @@ const Contact = () => {
         <Grid padded centered>
             <Grid.Row color='violet'>
                 <Container>
-                    <Image
-                        src={selfie}
-                        size='small'
-                        inline
-                        circular
-                        style={{ marginTop: '50px' }}
-                    />
-                    <Icon name='talk' size='huge' />
+                    <Grid centered style={{ marginTop: '50px' }}>
+                        <Grid.Column width='5'></Grid.Column>
+                        <Grid.Column
+                            textAlign='center'
+                            mobile='6'
+                            tablet='4'
+                            computer='3'
+                        >
+                            <Image
+                                src={selfie}
+                                inline
+                                circular
+                                fluid
+                            />
+                        </Grid.Column>
+                        <Grid.Column width='5'>
+                            <Icon name='talk' size='huge' />
+                        </Grid.Column>
+                    </Grid>
                     <Header
                         inverted
                         as='h1'
@@ -35,7 +46,7 @@ const Contact = () => {
                     </p>
                 </Container>
             </Grid.Row>
-        </Grid>
+        </Grid >
     );
 };
 
